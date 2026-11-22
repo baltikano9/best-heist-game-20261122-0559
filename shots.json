@@ -1,0 +1,6 @@
+[
+  { "name": "1-heist.jpg", "query": "?scene=heist" },
+  { "name": "2-patrol.jpg", "query": "?scene=patrol" },
+  { "name": "3-loot.jpg", "query": "?scene=loot" },
+  { "name": "4-menu.jpg", "query": "?scene=menu" }
+]
