@@ -24,6 +24,8 @@ const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const SHOTS = ['1-heist.jpg', '2-patrol.jpg', '3-loot.jpg', '4-menu.jpg'];
 const missing = SHOTS.filter((s) => !existsSync(join(here, 'screenshots', s)));
 if (missing.length) throw new Error(`missing screenshots: ${missing.join(', ')}`);
+// The Gilded Vault: refuse to hand in an entry with no game to play.
+if (!existsSync(join(here, 'game', 'index.html'))) throw new Error('missing game/index.html');
 console.log(`The Gilded Vault: packing game/ and ${SHOTS.length} screenshots into ${out}`);
 
 mkdirSync(out, { recursive: true });
